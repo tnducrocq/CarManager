@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tertiaryColor"
+    android:orientation="vertical"
+    tools:context="fr.tnducrocq.carmanager.LoginActivity">
+
+    <com.gturedi.views.StatefulLayout
+        android:id="@+id/view_login_statefulLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:stfAnimationEnabled="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fr.tnducrocq.carmanager.ui.view.SlideView
+                android:id="@+id/view_login_slideview"
+                android:layout_width="60dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:orientation="vertical"
+                app:duration="200"
+                app:slideBackground="@drawable/shape_background"
+                app:slideSrc="@drawable/ic_google_logo"
+                app:slideSrcMarginBottom="2dp"
+                app:slideSrcMarginLeft="2dp"
+                app:slideSrcMarginRight="2dp"
+                app:slideSrcMarginTop="2dp"
+                app:slideSuccessPercent="75"/>
+
+            <TextView
+                android:id="@+id/text_login_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_login_slideview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="WELCOME"/>
+
+            <TextView
+                android:id="@+id/text_login_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_login_welcome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="CONNEXION À CAR MANAGER"
+                android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/view_login_border"
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_below="@+id/text_login_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:background="@color/primaryColor"/>
+
+            <TextView
+                android:id="@+id/text_login_how"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_login_border"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Déplacer le logo google pour vous connecter\nà l'application"/>
+        </RelativeLayout>
+
+    </com.gturedi.views.StatefulLayout>
+
+
+</RelativeLayout>

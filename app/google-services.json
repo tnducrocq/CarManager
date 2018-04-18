@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "616284132793",
+    "firebase_url": "https://carmanager-40687.firebaseio.com",
+    "project_id": "carmanager-40687",
+    "storage_bucket": "carmanager-40687.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616284132793:android:465bc94a9a493938",
+        "android_client_info": {
+          "package_name": "fr.tnducrocq.carmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616284132793-us6qjadbbb61ijr0hs9k15c983ph9sf1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fr.tnducrocq.carmanager",
+            "certificate_hash": "aef0316ecf6f512e9f5afe16b05cad6f67dc5586"
+          }
+        },
+        {
+          "client_id": "616284132793-uqlreb5cup57gqpi6h8er8us2b7eg8qi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZfA1QbRrKjQpTRmtpOpjmGBf8_oXJW18"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616284132793-uqlreb5cup57gqpi6h8er8us2b7eg8qi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

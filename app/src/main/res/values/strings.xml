@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Car Manager</string>
+    <string name="btn_main_logout">Déconnexion</string>
+</resources>
