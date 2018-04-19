@@ -69,6 +69,10 @@ dependencies {
     }
     implementation "com.ritesh:ratiolayout:1.0.0"
     implementation 'com.github.gturedi:stateful-layout:1.2.1'
+    implementation 'com.github.florent37:arclayout:1.0.3'
+    implementation 'com.github.bmarrdev:android-DecoView-charting:v1.2'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 

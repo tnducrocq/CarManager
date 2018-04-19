@@ -14,7 +14,15 @@
     <color name="tertiaryColor">#557280</color>
     <color name="tertiaryLightColor">#83a0af</color>
     <color name="tertiaryDarkColor">#37454d</color>
+    <color name="tertiaryDark2Color">#293339</color>
+
     <color name="tertiaryTextColor">#ffffff</color>
 
     <color name="loaderColor">#6A000000</color>
+    <color name="background">#efefed</color>
+
+    <color name="colorSerieBack">#FFE2E2E2</color>
+    <color name="colorSerieRed">#D9534F</color>
+    <color name="colorSerieOrange">#F0AD4E</color>
+    <color name="colorSerieGreen">#5CB85C</color>
 </resources>

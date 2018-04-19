@@ -21,6 +21,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import fr.tnducrocq.carmanager.adapter.CarAdapter;
+import fr.tnducrocq.carmanager.car.CarActivity;
 import fr.tnducrocq.carmanager.model.Provider;
 import fr.tnducrocq.carmanager.model.SchedulerProvider;
 import fr.tnducrocq.carmanager.model.beans.Car;

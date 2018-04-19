@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_car_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ritesh.ratiolayout.RatioFrameLayout
+        android:id="@+id/ratioFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fixed_attribute="WIDTH"
+        app:horizontal_ratio="16"
+        app:vertical_ratio="9">
+
+        <ImageView
+            android:id="@+id/image_car_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/car"/>
+
+    </com.ritesh.ratiolayout.RatioFrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/ratioFrameLayout"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toStartOf="@+id/layout_car_empty">
+
+            <RelativeLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_road"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_car_kilometers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center_vertical"
+                    tools:text="140 00km"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_car_empty"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="4dp"
+            android:layout_toEndOf="@+id/layout_car_empty">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text_car_maintenance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        tools:text="140 00km"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_maintenance"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/ratioFrameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/background_circle">
+
+        <com.hookedonplay.decoviewlib.DecoView
+            android:id="@+id/deco_car_fuel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            app:dv_lineWidth="12dp"
+            app:dv_rotateAngle="0"
+            app:dv_totalAngle="180">
+        </com.hookedonplay.decoviewlib.DecoView>
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_station_fuel"/>
+    </RelativeLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_car_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        app:menu_animationDelayPerItem="0"
+        app:menu_colorNormal="@color/secondaryColor"
+        app:menu_colorPressed="@color/secondaryColor"
+        app:menu_colorRipple="@color/secondaryColor"
+        app:menu_icon="@drawable/ic_add_black_24dp"
+        app:menu_labels_hideAnimation="@anim/jump_to_down"
+        app:menu_labels_showAnimation="@anim/jump_from_down"
+        app:menu_labels_style="@style/MenuLabelsStyle"
+        app:menu_shadowColor="#444">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_car_fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            app:fab_colorNormal="@color/secondaryLightColor"
+            app:fab_colorPressed="@color/secondaryLightColor"
+            app:fab_colorRipple="@color/secondaryLightColor"
+            app:fab_size="mini"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>

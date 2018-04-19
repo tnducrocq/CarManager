@@ -2,8 +2,8 @@
 
     <!-- Base application theme. -->
     <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryDark">@color/primaryColor</item>
+        <item name="colorPrimary">@color/tertiaryDarkColor</item>
+        <item name="colorPrimaryDark">@color/tertiaryDark2Color</item>
         <item name="colorAccent">@color/primaryColor</item>
     </style>
 
@@ -19,6 +19,13 @@
     <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MenuLabelsStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
     </style>
 
 </resources>

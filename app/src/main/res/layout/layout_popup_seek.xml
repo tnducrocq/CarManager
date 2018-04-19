@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_gauge">
+
+        <fr.tnducrocq.carmanager.ui.view.CircularSeekBar
+            android:id="@+id/seek_layoutseek_station"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="9dp"
+            app:circle_color="#00000000"
+            app:circle_progress_color="#00000000"
+            app:circle_x_radius="282dp"
+            app:circle_y_radius="282dp"
+            app:end_angle="0"
+            app:max="100"
+
+            app:pointer_alpha_ontouch="100"
+            app:pointer_color="@color/colorSerieRed"
+            app:pointer_halo_color="#ed1c24"
+            app:progress="40"
+            app:start_angle="-180"
+            app:use_custom_radii="true"
+            />
+ 
+        <ImageView
+            android:id="@+id/image_layoutseek_station"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_station_white_fuel"/>
+
+        <TextView
+            android:id="@+id/text_layoutseek_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_layoutseek_station"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:text="86%"/>
+
+    </RelativeLayout>
+</RelativeLayout>

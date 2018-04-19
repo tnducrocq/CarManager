@@ -22,7 +22,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".TeamActivity">
         </activity>
-        <activity android:name=".CarActivity">
+        <activity android:name=".car.CarActivity">
         </activity>
     </application>
 

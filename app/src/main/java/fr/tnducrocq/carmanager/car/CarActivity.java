@@ -1,32 +1,26 @@
-package fr.tnducrocq.carmanager;
+package fr.tnducrocq.carmanager.car;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import fr.tnducrocq.carmanager.R;
 import fr.tnducrocq.carmanager.model.beans.Car;
 
 public class CarActivity extends AppCompatActivity {
 
+    private static final String TAG = CarActivity.class.getSimpleName();
+
     private Car mCar;
 
-    @BindView(R.id.image_car_picture)
-    ImageView mPicture;
-
-    @BindView(R.id.car_toolbar_layout)
-    public CollapsingToolbarLayout mCollapsingToolbarLayout;
-
-    @BindView(R.id.car_toolbar)
-    public Toolbar mToolbar;
+    @BindView(R.id.toolbar_car)
+    Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +28,6 @@ public class CarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_car);
         ButterKnife.bind(this);
 
-        mCollapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppBar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -43,14 +36,11 @@ public class CarActivity extends AppCompatActivity {
             mCar = getIntent().getParcelableExtra("car");
         }
         if (mCar != null) {
-            initView();
-        }
-    }
-
-    public void initView() {
-        mCollapsingToolbarLayout.setTitle(mCar.getBrand() + " " + mCar.getName());
-        if (mCar.getUrl() != null) {
-            Glide.with(this).load(mCar.getUrl()).into(mPicture);
+            mToolbar.setTitle(mCar.getBrand() + " " + mCar.getName());
+            Fragment fragment = CarHomeFragment.newInstance(mCar);
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.layout_car_container, fragment)
+                    .commit();
         }
     }
 

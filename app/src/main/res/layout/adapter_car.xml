@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             app:fixed_attribute="HEIGHT"
-            app:horizontal_ratio="18"
+            app:horizontal_ratio="16"
             app:vertical_ratio="9">
 
             <ImageView

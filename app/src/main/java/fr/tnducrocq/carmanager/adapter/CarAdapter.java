@@ -15,6 +15,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -94,7 +95,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
         public void bindData(final Car car) {
             Context context = mView.getContext();
             mName.setText(car.getBrand() + " " + car.getName());
-            mKilometers.setText(Integer.toString(car.getKilometers()));
+            mKilometers.setText(java.text.NumberFormat.getNumberInstance(Locale.FRANCE).format(car.getKilometers()) + " km");
 
             Drawable drawable;
             if (car.getFuel() < 0.05) {
